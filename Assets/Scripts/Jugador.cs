@@ -46,20 +46,22 @@ public class Jugador : MonoBehaviour
         if (Physics2D.Raycast(transform.position, Vector3.down, 0.7f))
         {
             grounded = true;
+            animator.SetBool("estaSaltando", false);
         }
         else
         {
             grounded = false;
+            animator.SetBool("estaSaltando", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             Jump();
-            animator.SetBool("estaSaltando", true);
+            //animator.SetBool("estaSaltando", true);
         }
         else
         {
-            animator.SetBool("estaSaltando", false);
+            //animator.SetBool("estaSaltando", false);
         }
     }
 
@@ -93,5 +95,7 @@ public class Jugador : MonoBehaviour
     private void Jump()
     {
         rigidbody2d.AddForce(Vector2.up * jumpForce);
+        //animator.SetBool("estaSaltando", true);
+
     }
 }
