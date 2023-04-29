@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jugador : MonoBehaviour
 {
+    public static Jugador instance;
     private Rigidbody2D rigidbody2d;
 
     float horizontal;
@@ -13,9 +14,17 @@ public class Jugador : MonoBehaviour
 
     private bool grounded;
 
-    private Animator animator;
+    public Animator animator;
 
     public Renderer fondo;
+
+    public float knockBackLength, knockBackForce;
+    private float knockBackCounter;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -97,5 +106,10 @@ public class Jugador : MonoBehaviour
         rigidbody2d.AddForce(Vector2.up * jumpForce);
         //animator.SetBool("estaSaltando", true);
 
+    }
+
+    public void KnockBack()
+    {
+        knockBackCounter = knockBackLength;
     }
 }
