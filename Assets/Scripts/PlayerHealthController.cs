@@ -10,6 +10,10 @@ public class PlayerHealthController : MonoBehaviour
     private float invincibleCounter;
 
     private SpriteRenderer theSR;
+
+    public GameObject deathEffect;
+
+
     private void Awake()
     {
         instance = this;
@@ -50,6 +54,9 @@ public class PlayerHealthController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
+
+                Instantiate(deathEffect, Jugador.instance.transform.position, Jugador.instance.transform.rotation);
+
                 gameObject.SetActive(false);
                 LevelManager.instance.RespawnPlayer();
             }
@@ -62,5 +69,17 @@ public class PlayerHealthController : MonoBehaviour
 
             UIController.instance.UpdateHealthDispay();
         }
+    }
+
+    public void GanaVida()
+    {
+        currentHealth++;
+
+        if(currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        UIController.instance.UpdateHealthDispay();
     }
 }
