@@ -11,6 +11,7 @@ public class Jugador : MonoBehaviour
 
     public float jumpForce;
     public float speed;
+    public float bounceForce;
 
     private bool grounded;
 
@@ -111,5 +112,11 @@ public class Jugador : MonoBehaviour
     public void KnockBack()
     {
         knockBackCounter = knockBackLength;
+    }
+
+
+    public void Bounce()
+    {
+        rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, bounceForce);
     }
 }

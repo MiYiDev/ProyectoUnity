@@ -43,5 +43,7 @@ public class LevelManager : MonoBehaviour
         Jugador.instance.transform.position = ChecksController.instance.spawnPoint;
 
         PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.maxHealth;
+
+        UIController.instance.UpdateHealthDispay();
     }
 }
