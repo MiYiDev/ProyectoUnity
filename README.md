@@ -9,3 +9,5 @@
 29/04/2023: Añado checkpoints y la opción de morir. 
 
 30/04/2023: Añado items coleccionables así como sus respectivos efectos de recogida. Además, añado la posibilidad de morir si se cae al vacío y el efecto de muerte del jugador.
+
+01/0472023: Empiezo a introducir enemigos y la posibilidad de matarlos así como de que hagan daño al jugador.
