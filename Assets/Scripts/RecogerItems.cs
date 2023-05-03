@@ -19,6 +19,9 @@ public class RecogerItems : MonoBehaviour
             {
                 LevelManager.instance.gemasRecogidas++;
 
+                AudioManager.instance.PlayEfectos(4);
+
+
                 UIController.instance.UpdateGemCount();
 
                 Instantiate(efectoRecoger, transform.position, transform.rotation);
@@ -33,6 +36,9 @@ public class RecogerItems : MonoBehaviour
                 if(PlayerHealthController.instance.currentHealth != PlayerHealthController.instance.maxHealth)
                 {
                     PlayerHealthController.instance.GanaVida();
+
+                    AudioManager.instance.PlayEfectos(5);
+
 
                     esRecogida = true;
 

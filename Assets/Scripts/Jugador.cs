@@ -9,6 +9,10 @@ public class Jugador : MonoBehaviour
 
     float horizontal;
 
+    public Transform tocaSuelo;
+
+    public LayerMask suelo;
+
     public float jumpForce;
     public float speed;
     public float bounceForce;
@@ -40,6 +44,8 @@ public class Jugador : MonoBehaviour
         // Foxy movement (axisraw = -1 for A and 1 for D)
         horizontal = Input.GetAxisRaw("Horizontal");
 
+        grounded = Physics2D.OverlapCircle(tocaSuelo.position, 0.2f, suelo);
+
         if (horizontal < 0)
         {
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
@@ -51,22 +57,33 @@ public class Jugador : MonoBehaviour
 
         animator.SetBool("running", horizontal != 0.0f);
 
-        Debug.DrawRay(transform.position, Vector3.down * 0.7f, Color.red);
-
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.7f))
+        if (grounded)
         {
-            grounded = true;
             animator.SetBool("estaSaltando", false);
+
         }
         else
         {
-            grounded = false;
             animator.SetBool("estaSaltando", true);
         }
+
+        //if (Physics2D.Raycast(transform.position, Vector3.down, 0.7f))
+        //{
+        //    grounded = true;
+        //    Debug.Log(grounded);
+        //    animator.SetBool("estaSaltando", false);
+        //}
+        //else
+        //{
+        //    grounded = false;
+        //    animator.SetBool("estaSaltando", true);
+        //}
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             Jump();
+            //AudioManager.instance.PlayEfectos(3);
+
             //animator.SetBool("estaSaltando", true);
         }
         else
@@ -105,8 +122,6 @@ public class Jugador : MonoBehaviour
     private void Jump()
     {
         rigidbody2d.AddForce(Vector2.up * jumpForce);
-        //animator.SetBool("estaSaltando", true);
-
     }
 
     public void KnockBack()

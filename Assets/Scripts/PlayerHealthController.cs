@@ -48,6 +48,7 @@ public class PlayerHealthController : MonoBehaviour
         if (invincibleCounter <= 0)
         {
             currentHealth--;
+            AudioManager.instance.PlayEfectos(1);
 
             Jugador.instance.animator.SetTrigger("daño");
 

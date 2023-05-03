@@ -17,6 +17,7 @@ public class Hurtbox : MonoBehaviour
         if(other.tag == "Enemy")
         {
             other.transform.parent.gameObject.SetActive(false);
+            AudioManager.instance.PlayEfectos(2);
             Jugador.instance.Bounce();
             Instantiate(deathEffect, other.transform.position, other.transform.rotation);
 
@@ -26,6 +27,7 @@ public class Hurtbox : MonoBehaviour
             {
                 Instantiate(collectible, other.transform.position, other.transform.rotation);
             }
+
         }
     }
 }
