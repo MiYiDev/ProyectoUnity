@@ -10,4 +10,6 @@
 
 30/04/2023: Añado items coleccionables así como sus respectivos efectos de recogida. Además, añado la posibilidad de morir si se cae al vacío y el efecto de muerte del jugador.
 
-01/0472023: Empiezo a introducir enemigos y la posibilidad de matarlos así como de que hagan daño al jugador.
+01/05/2023: Empiezo a introducir enemigos y la posibilidad de matarlos así como de que hagan daño al jugador.
+
+03/05/2023: Introduzco efectos de sonido y musica de fondo de nivel.
