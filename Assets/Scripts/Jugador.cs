@@ -41,77 +41,66 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Foxy movement (axisraw = -1 for A and 1 for D)
-        horizontal = Input.GetAxisRaw("Horizontal");
-
-        grounded = Physics2D.OverlapCircle(tocaSuelo.position, 0.2f, suelo);
-
-        if (horizontal < 0)
+        if (!MenuPausa.instance.estaPausado)
         {
-            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-        }
-        else if (horizontal > 0)
-        {
-            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+
+            // Foxy movement (axisraw = -1 for A and 1 for D)
+            horizontal = Input.GetAxisRaw("Horizontal");
+
+            grounded = Physics2D.OverlapCircle(tocaSuelo.position, 0.2f, suelo);
+
+            if (horizontal < 0)
+            {
+                transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+            }
+            else if (horizontal > 0)
+            {
+                transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+            }
+
+            animator.SetBool("running", horizontal != 0.0f);
+
+            if (grounded)
+            {
+                animator.SetBool("estaSaltando", false);
+
+            }
+            else
+            {
+                animator.SetBool("estaSaltando", true);
+            }
+
+
+
+            if (Input.GetKeyDown(KeyCode.Space) && grounded)
+            {
+                Jump();
+            }
         }
 
-        animator.SetBool("running", horizontal != 0.0f);
-
-        if (grounded)
-        {
-            animator.SetBool("estaSaltando", false);
-
-        }
-        else
-        {
-            animator.SetBool("estaSaltando", true);
-        }
-
-        //if (Physics2D.Raycast(transform.position, Vector3.down, 0.7f))
-        //{
-        //    grounded = true;
-        //    Debug.Log(grounded);
-        //    animator.SetBool("estaSaltando", false);
-        //}
-        //else
-        //{
-        //    grounded = false;
-        //    animator.SetBool("estaSaltando", true);
-        //}
-
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
-        {
-            Jump();
-            //AudioManager.instance.PlayEfectos(3);
-
-            //animator.SetBool("estaSaltando", true);
-        }
-        else
-        {
-            //animator.SetBool("estaSaltando", false);
-        }
     }
 
     // funcion para las fisicas del personaje (mover, saltar...)
     private void FixedUpdate()
     {
-        if(horizontal < 0)
+        if (horizontal < 0)
         {
-            if(transform.position.x > -25.8f)
+            if (transform.position.x > -25.8f)
             {
                 rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
-            } else
+            }
+            else
             {
                 rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
             }
         }
 
-        if(horizontal == 0)
+        if (horizontal == 0)
         {
             rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
         }
 
-        if(horizontal > 0)
+        if (horizontal > 0)
         {
             rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
         }
