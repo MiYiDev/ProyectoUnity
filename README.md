@@ -13,3 +13,5 @@
 01/05/2023: Empiezo a introducir enemigos y la posibilidad de matarlos así como de que hagan daño al jugador.
 
 03/05/2023: Introduzco efectos de sonido y musica de fondo de nivel.
+
+04/05/2023: Añado el menú principal, así como el de pausa y comienzo con la preparación del final de los niveles.
