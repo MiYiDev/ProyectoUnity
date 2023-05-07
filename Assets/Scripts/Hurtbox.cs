@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hurtbox : MonoBehaviour
 {
     public GameObject deathEffect;
-
+        
     [Range(0,100)]
     public float dropProbability;
 

@@ -26,6 +26,8 @@ public class Jugador : MonoBehaviour
     public float knockBackLength, knockBackForce;
     private float knockBackCounter;
 
+    public bool pararMovimiento;
+
     private void Awake()
     {
         instance = this;
@@ -41,7 +43,7 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!MenuPausa.instance.estaPausado)
+        if (!MenuPausa.instance.estaPausado && !pararMovimiento)
         {
 
             // Foxy movement (axisraw = -1 for A and 1 for D)

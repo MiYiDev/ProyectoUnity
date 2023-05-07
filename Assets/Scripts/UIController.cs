@@ -13,7 +13,7 @@ public class UIController : MonoBehaviour
 
     public Text gemText;
 
-
+    public GameObject textoGanar;
 
     private void Awake()
     {

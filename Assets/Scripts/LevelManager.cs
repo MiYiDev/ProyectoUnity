@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class LevelManager : MonoBehaviour
     public float waitToRespawn;
 
     public int gemasRecogidas;
+
+    public string nivel;
 
     // Start is called before the first frame update
     void Start()
@@ -45,5 +48,21 @@ public class LevelManager : MonoBehaviour
         PlayerHealthController.instance.currentHealth = PlayerHealthController.instance.maxHealth;
 
         UIController.instance.UpdateHealthDispay();
+    }
+
+    public void AcabarNivel()
+    {
+        StartCoroutine(AcabarNivelCo());
+    }
+
+    public IEnumerator AcabarNivelCo()
+    {
+        Jugador.instance.pararMovimiento = true;
+
+        UIController.instance.textoGanar.SetActive(true);
+
+        yield return new WaitForSeconds(4.5f);
+
+        SceneManager.LoadScene(nivel);
     }
 }
