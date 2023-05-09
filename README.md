@@ -15,3 +15,5 @@
 03/05/2023: Introduzco efectos de sonido y musica de fondo de nivel.
 
 04/05/2023: Añado el menú principal, así como el de pausa y comienzo con la preparación del final de los niveles.
+
+07/05/2023: Creo diferentes niveles y diseño el menú de selección, así como el menú principal.
