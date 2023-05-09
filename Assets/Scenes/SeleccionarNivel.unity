@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuInicio: Menu
-  nivelUno: SampleScene
+  nivelUno: Nivel1
   nivelDos: Test3
   nivelTres: 
 --- !u!1 &190472901
