@@ -21,6 +21,7 @@ public class RecogerItems : MonoBehaviour
 
                 AudioManager.instance.PlayEfectos(4);
 
+                PlayerPrefs.SetInt("gemasRecord", PlayerPrefs.GetInt("gemasRecord") + 1);
 
                 UIController.instance.UpdateGemCount();
 
@@ -39,6 +40,7 @@ public class RecogerItems : MonoBehaviour
 
                     AudioManager.instance.PlayEfectos(5);
 
+                    PlayerPrefs.SetInt("corazonRecord", PlayerPrefs.GetInt("corazonRecord") + 1);
 
                     esRecogida = true;
 

@@ -28,6 +28,7 @@ public class Hurtbox : MonoBehaviour
                 Instantiate(collectible, other.transform.position, other.transform.rotation);
             }
 
+            PlayerPrefs.SetInt("enemigosMatados", PlayerPrefs.GetInt("enemigosMatados") + 1);
         }
     }
 }
