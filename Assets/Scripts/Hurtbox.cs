@@ -14,7 +14,7 @@ public class Hurtbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Enemy")
+        if(other.tag == "Dino" || other.tag == "Sapo")
         {
             other.transform.parent.gameObject.SetActive(false);
             AudioManager.instance.PlayEfectos(2);
@@ -26,6 +26,15 @@ public class Hurtbox : MonoBehaviour
             if(dropSelect <= dropProbability)
             {
                 Instantiate(collectible, other.transform.position, other.transform.rotation);
+            }
+
+            if (other.tag == "Dino")
+            {
+                PlayerPrefs.SetInt("dinosMatados", PlayerPrefs.GetInt("dinosMatados") + 1);
+            }
+            if (other.tag == "Sapo")
+            {
+                PlayerPrefs.SetInt("saposMatados", PlayerPrefs.GetInt("saposMatados") + 1);
             }
 
             PlayerPrefs.SetInt("enemigosMatados", PlayerPrefs.GetInt("enemigosMatados") + 1);

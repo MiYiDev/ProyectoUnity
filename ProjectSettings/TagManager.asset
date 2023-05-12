@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Suelo
   - Enemy
+  - Nivel1
+  - Nivel2
+  - Nivel3
+  - Dino
+  - Sapo
   layers:
   - Default
   - TransparentFX

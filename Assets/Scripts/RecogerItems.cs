@@ -19,6 +19,8 @@ public class RecogerItems : MonoBehaviour
             {
                 LevelManager.instance.gemasRecogidas++;
 
+                Debug.Log(LevelManager.instance.gemasRecogidas);
+
                 AudioManager.instance.PlayEfectos(4);
 
                 PlayerPrefs.SetInt("gemasRecord", PlayerPrefs.GetInt("gemasRecord") + 1);

@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.459
       objectReference: {fileID: 0}
+    - target: {fileID: 2206648851323778623, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
+      propertyPath: m_TagString
+      value: Sapo
+      objectReference: {fileID: 0}
     - target: {fileID: 2206648851446802034, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2970,6 +2974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802571084591674344, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
+      propertyPath: efectoRecoger
+      value: 
+      objectReference: {fileID: 1917460098215734676, guid: cd203052814f84a21b2d7fdbe2d45508, type: 3}
     - target: {fileID: 4802571084591674345, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
       propertyPath: m_Name
       value: Gem (2)
@@ -3332,7 +3340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitToRespawn: 2
   gemasRecogidas: 0
-  nivel: Menu
+  nivel: SeleccionarNivel
 --- !u!4 &532400995
 Transform:
   m_ObjectHideFlags: 0
@@ -3530,7 +3538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 781.3, y: 495.1}
+  m_AnchoredPosition: {x: 781.3, y: 406.6}
   m_SizeDelta: {x: 181.594, y: 59.048}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &585966839
@@ -3584,6 +3592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802571084591674344, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
+      propertyPath: efectoRecoger
+      value: 
+      objectReference: {fileID: 1917460098215734676, guid: cd203052814f84a21b2d7fdbe2d45508, type: 3}
     - target: {fileID: 4802571084591674345, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
       propertyPath: m_Name
       value: Gem (5)
@@ -4782,6 +4794,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802571084591674344, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
+      propertyPath: efectoRecoger
+      value: 
+      objectReference: {fileID: 1917460098215734676, guid: cd203052814f84a21b2d7fdbe2d45508, type: 3}
     - target: {fileID: 4802571084591674345, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
       propertyPath: m_Name
       value: Gem (4)
@@ -5666,6 +5682,10 @@ PrefabInstance:
     - target: {fileID: 2206648850226838888, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.247
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206648851323778623, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
+      propertyPath: m_TagString
+      value: Sapo
       objectReference: {fileID: 0}
     - target: {fileID: 2206648851446802034, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
       propertyPath: m_RootOrder
@@ -7433,6 +7453,7 @@ GameObject:
   - component: {fileID: 1244144830}
   - component: {fileID: 1244144832}
   - component: {fileID: 1244144833}
+  - component: {fileID: 1244144834}
   m_Layer: 0
   m_Name: Foxy
   m_TagString: Player
@@ -7617,6 +7638,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.568944, y: 0.68875074}
   m_EdgeRadius: 0
+--- !u!114 &1244144834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244144823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ff2ab201a9577428db109d810a51a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1245333543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4802571084591674324, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
@@ -8162,6 +8195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Dino (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 640675593888724088, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
+      propertyPath: m_TagString
+      value: Dino
+      objectReference: {fileID: 0}
     - target: {fileID: 640675593911784432, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.156
@@ -8692,6 +8729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802571084591674344, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
+      propertyPath: efectoRecoger
+      value: 
+      objectReference: {fileID: 1917460098215734676, guid: cd203052814f84a21b2d7fdbe2d45508, type: 3}
     - target: {fileID: 4802571084591674345, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
       propertyPath: m_Name
       value: Gem (1)
@@ -9328,6 +9369,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802571084591674344, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
+      propertyPath: efectoRecoger
+      value: 
+      objectReference: {fileID: 1917460098215734676, guid: cd203052814f84a21b2d7fdbe2d45508, type: 3}
     - target: {fileID: 4802571084591674345, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
       propertyPath: m_Name
       value: Gem (3)
@@ -10525,6 +10570,10 @@ PrefabInstance:
     - target: {fileID: 640675593138830653, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
       propertyPath: m_Name
       value: Enemy Dino (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 640675593888724088, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
+      propertyPath: m_TagString
+      value: Dino
       objectReference: {fileID: 0}
     - target: {fileID: 640675593911784432, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12337,6 +12386,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4802571084591674344, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
+      propertyPath: efectoRecoger
+      value: 
+      objectReference: {fileID: 1917460098215734676, guid: cd203052814f84a21b2d7fdbe2d45508, type: 3}
     - target: {fileID: 4802571084591674345, guid: 032fd305433af4b309a4489b068e11ec, type: 3}
       propertyPath: m_Name
       value: Gem
@@ -20937,6 +20990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Dino
       objectReference: {fileID: 0}
+    - target: {fileID: 640675593888724088, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
+      propertyPath: m_TagString
+      value: Dino
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e1b64929a2d34258b86c5c6bf5eee9e, type: 3}
 --- !u!1001 &2206648851112376312
@@ -20946,6 +21003,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 676157491}
     m_Modifications:
+    - target: {fileID: 2206648851323778623, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
+      propertyPath: m_TagString
+      value: Sapo
+      objectReference: {fileID: 0}
     - target: {fileID: 2206648851446802034, guid: 94f56e9ccbbfb4bca9cc67f8b96a3626, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -21353,6 +21414,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4746510537160489417, guid: bd1d901e1d20f43acb389e87db77b952, type: 3}
+      propertyPath: numeroNivel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4746510537160489420, guid: bd1d901e1d20f43acb389e87db77b952, type: 3}
       propertyPath: m_RootOrder
       value: 7

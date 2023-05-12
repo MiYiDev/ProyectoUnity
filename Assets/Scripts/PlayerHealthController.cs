@@ -58,7 +58,7 @@ public class PlayerHealthController : MonoBehaviour
 
                 Instantiate(deathEffect, Jugador.instance.transform.position, Jugador.instance.transform.rotation);
 
-                PlayerPrefs.SetInt("vecesMuertas", PlayerPrefs.GetInt("vecesMuertas"));
+                PlayerPrefs.SetInt("vecesMuertas", PlayerPrefs.GetInt("vecesMuertas") + 1);
 
                 gameObject.SetActive(false);
                 LevelManager.instance.RespawnPlayer();

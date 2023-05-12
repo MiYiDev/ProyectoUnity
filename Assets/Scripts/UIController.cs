@@ -67,6 +67,7 @@ public class UIController : MonoBehaviour
 
     public void UpdateGemCount()
     {
+        Debug.Log("Entro en UpdateGemCount");
         gemText.text = LevelManager.instance.gemasRecogidas.ToString();
     }
 }

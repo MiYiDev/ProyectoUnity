@@ -72,6 +72,8 @@ public class Jugador : MonoBehaviour
                 animator.SetBool("estaSaltando", true);
             }
 
+            Debug.Log(PlayerPrefs.GetInt("nivel1Desbloqueado"));
+
 
 
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
