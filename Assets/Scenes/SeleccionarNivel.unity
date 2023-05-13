@@ -244,7 +244,7 @@ MonoBehaviour:
   menuInicio: Menu
   nivelUno: Nivel1
   nivelDos: Nivel2
-  nivelTres: 
+  nivelTres: Nivel3
 --- !u!1 &190472901
 GameObject:
   m_ObjectHideFlags: 0

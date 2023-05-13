@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ActualizarEstadisticasController : MonoBehaviour
 {
-    public Text enemigosMatados;
+    public Text slimersMatados;
     public Text vecesMuertas;
     public Text gemasRecogidas;
     public Text corazonesRecogidos;
@@ -15,7 +15,7 @@ public class ActualizarEstadisticasController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemigosMatados.text = PlayerPrefs.GetInt("enemigosMatados").ToString();
+        slimersMatados.text = PlayerPrefs.GetInt("slimersMatados").ToString();
         vecesMuertas.text = PlayerPrefs.GetInt("vecesMuertas").ToString();
         gemasRecogidas.text = PlayerPrefs.GetInt("gemasRecord").ToString();
         corazonesRecogidos.text = PlayerPrefs.GetInt("corazonRecord").ToString();

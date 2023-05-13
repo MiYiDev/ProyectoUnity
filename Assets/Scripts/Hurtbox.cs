@@ -14,7 +14,7 @@ public class Hurtbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Dino" || other.tag == "Sapo")
+        if(other.tag == "Dino" || other.tag == "Sapo" || other.tag == "Slimer")
         {
             other.transform.parent.gameObject.SetActive(false);
             AudioManager.instance.PlayEfectos(2);
@@ -35,6 +35,11 @@ public class Hurtbox : MonoBehaviour
             if (other.tag == "Sapo")
             {
                 PlayerPrefs.SetInt("saposMatados", PlayerPrefs.GetInt("saposMatados") + 1);
+            }
+
+            if (other.tag == "Slimer")
+            {
+                PlayerPrefs.SetInt("slimersMatados", PlayerPrefs.GetInt("slimersMatados") + 1);
             }
 
             PlayerPrefs.SetInt("enemigosMatados", PlayerPrefs.GetInt("enemigosMatados") + 1);

@@ -257,7 +257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538, y: 67}
+  m_AnchoredPosition: {x: 518, y: 67}
   m_SizeDelta: {x: 57.6519, y: 53.7584}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53526336
@@ -453,7 +453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -336.52, y: -51}
+  m_AnchoredPosition: {x: -316.52, y: -51}
   m_SizeDelta: {x: 382.94, y: 49.3724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348860406
@@ -549,7 +549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538, y: -52}
+  m_AnchoredPosition: {x: 518, y: -52}
   m_SizeDelta: {x: 57.6519, y: 53.7584}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390962535
@@ -799,7 +799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281.38998, y: 70.51242}
+  m_AnchoredPosition: {x: 261.39, y: 70.51242}
   m_SizeDelta: {x: 455.56, y: 49.3724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716998890
@@ -1029,7 +1029,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 538, y: 9}
+  m_AnchoredPosition: {x: 518, y: 9}
   m_SizeDelta: {x: 57.6519, y: 53.7584}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766546612
@@ -1104,7 +1104,7 @@ GameObject:
   - component: {fileID: 986691424}
   - component: {fileID: 986691423}
   m_Layer: 5
-  m_Name: CountEnemigosMatados
+  m_Name: CountSlimersMatados
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1225,7 +1225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281.38998, y: 11.91876}
+  m_AnchoredPosition: {x: 261.39, y: 11.91876}
   m_SizeDelta: {x: 455.56, y: 49.3724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1279062248
@@ -1406,7 +1406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -336.52, y: 11.918762}
+  m_AnchoredPosition: {x: -316.52, y: 11.918762}
   m_SizeDelta: {x: 382.94, y: 49.3724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546754686
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be6c55648c297d84b87123732389bcf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemigosMatados: {fileID: 986691424}
+  slimersMatados: {fileID: 0}
   vecesMuertas: {fileID: 302299935}
   gemasRecogidas: {fileID: 28112540}
   corazonesRecogidos: {fileID: 53526337}
@@ -1628,7 +1628,7 @@ GameObject:
   - component: {fileID: 2008456066}
   - component: {fileID: 2008456065}
   m_Layer: 5
-  m_Name: Enemigos Matados
+  m_Name: Slimers Matados
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,7 +1651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -306, y: 70.51242}
+  m_AnchoredPosition: {x: -286, y: 70.51242}
   m_SizeDelta: {x: 443.9894, y: 45.9262}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008456065
@@ -1702,7 +1702,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Enemigos Asesinados: '
+  m_Text: 'Slimers Asesinados: '
 --- !u!222 &2008456067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1747,7 +1747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 281.38998, y: -51}
+  m_AnchoredPosition: {x: 261.39, y: -51}
   m_SizeDelta: {x: 455.56, y: 49.3724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2020451301
