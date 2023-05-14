@@ -5572,7 +5572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!222 &579973969
@@ -5598,10 +5598,10 @@ RectTransform:
   m_Father: {fileID: 613560037}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 781.3, y: 440}
-  m_SizeDelta: {x: 181.594, y: 59.048}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -178.69995, y: -46}
+  m_SizeDelta: {x: 181.594, y: 59.047974}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &585288346
 GameObject:
