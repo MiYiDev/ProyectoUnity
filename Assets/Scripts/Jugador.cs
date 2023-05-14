@@ -28,6 +28,7 @@ public class Jugador : MonoBehaviour
 
     public bool pararMovimiento;
 
+    public bool estaCayendo;
 
 
     private void Awake()
@@ -89,23 +90,26 @@ public class Jugador : MonoBehaviour
     // funcion para las fisicas del personaje (mover, saltar...)
     private void FixedUpdate()
     {
-        if (horizontal < 0)
+        if (!estaCayendo)
         {
-            rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
+            if (horizontal < 0)
+            {
+                rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
 
+            }
+
+            if (horizontal == 0)
+            {
+                rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
+            }
+
+            if (horizontal > 0)
+            {
+                rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
+            }
+
+            fondo.material.mainTextureOffset = fondo.material.mainTextureOffset + new Vector2(horizontal * 0.2f, 0) * Time.deltaTime;
         }
-
-        if (horizontal == 0)
-        {
-            rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
-        }
-
-        if (horizontal > 0)
-        {
-            rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
-        }
-
-        fondo.material.mainTextureOffset = fondo.material.mainTextureOffset + new Vector2(horizontal * 0.2f, 0) * Time.deltaTime;
     }
 
     private void Jump()
