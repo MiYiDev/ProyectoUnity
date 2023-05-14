@@ -79,7 +79,7 @@ public class Jugador : MonoBehaviour
 
 
 
-            if (Input.GetKeyDown(KeyCode.Space) && grounded)
+            if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && grounded)
             {
                 Jump();
             }
