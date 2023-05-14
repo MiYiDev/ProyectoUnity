@@ -16,6 +16,8 @@ public class CameraScript : MonoBehaviour
 
     public float minHeight, maxHeight;
 
+    public Transform noAvanzar;
+
     private void Awake()
     {
         instance = this;
@@ -33,7 +35,7 @@ public class CameraScript : MonoBehaviour
         if (!pararCamara)
         {
 
-            if (foxy.transform.position.x > -17)
+            if (foxy.transform.position.x > noAvanzar.transform.position.x)
             {
                 Vector3 position = transform.position;
                 position.x = foxy.transform.position.x;

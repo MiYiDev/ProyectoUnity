@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SeleccionarNivel : MonoBehaviour
 {
@@ -10,11 +11,24 @@ public class SeleccionarNivel : MonoBehaviour
     public string nivelDos;
     public string nivelTres;
 
+    public Image nivel2Bloqueado;
+    public Image nivel3Bloqueado;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(PlayerPrefs.GetInt("nivel1Desbloqueado") == 1)
+        {
+            nivel2Bloqueado.enabled = false;
+        }
+        if (PlayerPrefs.GetInt("nivel2Desbloqueado") == 1)
+        {
+            nivel3Bloqueado.enabled = false;
+        }
+
+        Debug.Log("nivel1: " + PlayerPrefs.GetInt("nivel1Desbloqueado"));
+        Debug.Log("nivel2: " + PlayerPrefs.GetInt("nivel2Desbloqueado"));
     }
 
     // Update is called once per frame

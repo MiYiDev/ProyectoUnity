@@ -28,6 +28,8 @@ public class Jugador : MonoBehaviour
 
     public bool pararMovimiento;
 
+
+
     private void Awake()
     {
         instance = this;
@@ -89,14 +91,8 @@ public class Jugador : MonoBehaviour
     {
         if (horizontal < 0)
         {
-            if (transform.position.x > -25.8f)
-            {
-                rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
-            }
-            else
-            {
-                rigidbody2d.velocity = new Vector2(0, rigidbody2d.velocity.y);
-            }
+            rigidbody2d.velocity = new Vector2(horizontal * speed, rigidbody2d.velocity.y);
+
         }
 
         if (horizontal == 0)
